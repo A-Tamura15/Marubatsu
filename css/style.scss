@@ -1,0 +1,66 @@
+$cWhite: #fff;
+$cMain: #eee8aa;
+$cDarkYellow: #808000;
+body {
+    font-size: 20px;
+    font-family: "Kameron", "Noto Sans JP", sans-serif;
+}
+
+.game_before {
+    text-align: center;
+    padding: 10px 0;
+
+    &_text {
+        margin-bottom: 20px;
+    }
+}
+
+.btn {
+    background-color: $cWhite;
+    border: 1px solid $cDarkYellow;
+    color: $cDarkYellow;
+    padding: 15px 30px;
+    border-radius: 10px;
+    font-size: 20px;
+
+    &:hover {
+        opacity: 0.8;
+        cursor: pointer;
+    }
+}
+
+.start__btn {
+    margin-right: 10px;
+}
+
+.visibility_hidden {
+    visibility: hidden;
+}
+
+.marubatsu__area {
+    position: relative;
+    margin: 20px auto;
+}
+
+.cell {
+    background-color: $cMain;
+    border: 2px solid $cWhite;
+    transition: 0.3s;
+    width: 160px;
+    height: 160px;
+    text-align: center;
+    font-size: 50px;
+    font-weight: 800;
+    line-height: 160px;
+
+    &:hover {
+        cursor: pointer;
+        opacity: 0.6;
+    }
+}
+
+.turn_text {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 30px;
+}

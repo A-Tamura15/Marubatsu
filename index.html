@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="java">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="icon" href="./img/favicon.png">
+    <meta name="description" content="「マルバツゲーム」でコンピューターと対戦しよう！先に○か×の同じ記号を３つの並べた人の勝ちです。" />
+    <title>マルバツゲーム</title>
+</head>
+<body>
+    <div class="game_before">
+        <p class="game_before_text">先攻後攻を選択してください。</p>
+        <button id="first_attack" class="btn start__btn">先攻</button>
+        <button id="second_attack" class="btn start__btn">後攻</button>
+    </div>
+    <main>
+        <table class="marubatsu__area">
+            <tr>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+            </tr>
+            <tr>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+            </tr>
+            <tr>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+            </tr>
+        </table>
+        <p class="turn_text"></p>
+    </main>
+    <script src="./script/main.js"></script>
+</body>
+</html>
