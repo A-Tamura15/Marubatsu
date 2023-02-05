@@ -1,66 +1,99 @@
 $cWhite: #fff;
 $cMain: #eee8aa;
 $cDarkYellow: #808000;
+
+$breakpoints: (
+  "sp": "(max-width: 767px)",
+  "pc": "(min-width: 1200px)",
+) !default;
+
+// メディアクエリー
+@mixin mq($breakpoint: sp) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}
+
 body {
-    font-size: 20px;
-    font-family: "Kameron", "Noto Sans JP", sans-serif;
+  font-size: 20px;
+  font-family: "Kameron", "Noto Sans JP", sans-serif;
+
+  @include mq('sp') {
+    font-size: 16px;
+  }
 }
 
 .game_before {
-    text-align: center;
-    padding: 10px 0;
+  text-align: center;
+  padding: 10px 0;
 
-    &_text {
-        margin-bottom: 20px;
-    }
+  &_text {
+    margin-bottom: 20px;
+  }
 }
 
 .btn {
-    background-color: $cWhite;
-    border: 1px solid $cDarkYellow;
-    color: $cDarkYellow;
-    padding: 15px 30px;
-    border-radius: 10px;
-    font-size: 20px;
+  background-color: $cWhite;
+  border: 1px solid $cDarkYellow;
+  color: $cDarkYellow;
+  padding: 15px 30px;
+  border-radius: 10px;
+  font-size: 20px;
 
-    &:hover {
-        opacity: 0.8;
-        cursor: pointer;
-    }
+  @include mq("sp") {
+    padding: 10px 20px;
+    font-size: 16px;
+  }
+
+  &:hover {
+    opacity: 0.8;
+    cursor: pointer;
+  }
 }
 
 .start__btn {
-    margin-right: 10px;
+  margin-right: 10px;
 }
 
 .visibility_hidden {
-    visibility: hidden;
+  visibility: hidden;
 }
 
 .marubatsu__area {
-    position: relative;
-    margin: 20px auto;
+  position: relative;
+  margin: 20px auto;
 }
 
 .cell {
-    background-color: $cMain;
-    border: 2px solid $cWhite;
-    transition: 0.3s;
-    width: 160px;
-    height: 160px;
-    text-align: center;
-    font-size: 50px;
-    font-weight: 800;
-    line-height: 160px;
+  background-color: $cMain;
+  border: 2px solid $cWhite;
+  transition: 0.3s;
+  width: 160px;
+  height: 160px;
+  text-align: center;
+  font-size: 50px;
+  font-weight: 800;
+  line-height: 160px;
 
-    &:hover {
-        cursor: pointer;
-        opacity: 0.6;
-    }
+  @include mq("sp") {
+    width: 100px;
+    height: 100px;
+    font-size: 25px;
+    line-height: 100px;
+  }
+
+  &:hover {
+    cursor: pointer;
+    opacity: 0.6;
+  }
 }
 
 .turn_text {
-    text-align: center;
-    font-size: 30px;
-    margin-bottom: 30px;
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: 30px;
+
+  @include mq("sp") {
+    font-size: 20px;
+  }
 }
